@@ -8,7 +8,7 @@ class Song
   @artist = artist
   @genre = genre
   @@count += 1 
-  @@genres << 
+  if genre.include?
 end
 
 attr_accessor :name, :artist, :genre
