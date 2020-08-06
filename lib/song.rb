@@ -9,7 +9,8 @@ class Song
   @genre = genre
   @@count += 1 
   if genre.include?(genre) == false 
-    
+    @@genre[genre] = []
+  end 
 end
 
 attr_accessor :name, :artist, :genre
