@@ -33,7 +33,8 @@ def self.artists
 end
 
 def self.genre_count
-  counter = 0 
+ @@genres = genre 
+ @@count = songs
   
 end
 
