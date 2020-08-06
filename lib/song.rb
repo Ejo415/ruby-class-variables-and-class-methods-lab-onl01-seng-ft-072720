@@ -12,12 +12,8 @@ class Song
   @artist = artist
   @genre = genre
   @@count += 1 
-  if !(@@genres.include?(@genre))
-    @@genres << genre 
-    end 
-    if !(@@artists.include?(@artist))
-      @@artists << artist 
-    end 
+  @@genres << @genre 
+  @@artists << @artists
     
       
 end
@@ -29,11 +25,11 @@ def self.count
 end 
 
 def self.genres 
-  @@genres
+  @@genres.uniq
 end
 
 def self.artists
-  @@artists
+  @@artists.uniq 
 end
 
 def self.genre_count
@@ -41,7 +37,8 @@ def self.genre_count
  @@genres.each do |genre|
    if genre_count[genre]
      genre_count[genre] += 1 
-   
+   else
+     genre_count[genre] = 1 
    end
   end
 genre_count
