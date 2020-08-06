@@ -9,7 +9,7 @@ class Song
   @genre = genre
   @@count += 1 
   if genre.include?(genre) == false 
-    @@genres[genre] = []
+    @@genres << genre
   end 
 end
 
